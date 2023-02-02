@@ -1,5 +1,10 @@
 # @averay/gulp-index-dirs
 
+[![codecov][codecov-badge]][codecov]
+
+[codecov]: https://codecov.io/gh/adamaveray/gulp-index-dirs
+[codecov-badge]: https://codecov.io/gh/adamaveray/gulp-index-dirs/branch/main/graph/badge.svg
+
 A Gulp plugin to rename non-index files to indices within matching subdirectories.
 
 This plugin can be used to enable serving a static website with clean, extensionless URLs (e.g. `https://www.example.com/example-page/`) without needing to configure the web server to rewrite URLs, by moving generated files to index files within a matching subdirectory.
