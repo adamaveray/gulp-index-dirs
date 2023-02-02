@@ -1,7 +1,7 @@
 {
   "name": "@averay/gulp-index-dirs",
   "author": "Adam Averay (https://adamaveray.com.au/)",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Gulp plugin to rename non-index files to indices within matching subdirectories.",
   "license": "MIT",
   "homepage": "https://github.com/adamaveray/gulp-index-dirs",
@@ -16,7 +16,9 @@
   "module": "./dist/index.mjs",
   "unpkg": "./dist/index.umd.js",
   "typings": "./dist/index.d.ts",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "engines": {
     "node": ">=18"
   },
