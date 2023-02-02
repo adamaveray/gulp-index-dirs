@@ -20,8 +20,8 @@
     "node": ">=18"
   },
   "scripts": {
-    "build": "microbundle",
-    "dev": "microbundle watch",
+    "build": "microbundle --target=node",
+    "dev": "microbundle watch --target=node",
     "format": "npm run format:prettier && npm run format:eslint",
     "format:eslint": "eslint --fix .",
     "format:prettier": "prettier --write .",
