@@ -30,7 +30,9 @@
     "lint:prettier": "prettier --check .",
     "lint:typescript": "tsc --noEmit",
     "test": "jest",
-    "test+coverage": "jest --coverage"
+    "test+coverage": "jest --coverage",
+    "prepack": "npm run build",
+    "prepare": "husky install"
   },
   "jest": {
     "clearMocks": true,
