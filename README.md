@@ -1,6 +1,6 @@
 # @averay/gulp-index-dirs
 
-[![codecov][codecov-badge]][codecov]
+[![View code coverage on codecov][codecov-badge]][codecov]
 
 [codecov]: https://codecov.io/gh/adamaveray/gulp-index-dirs
 [codecov-badge]: https://codecov.io/gh/adamaveray/gulp-index-dirs/branch/main/graph/badge.svg
