@@ -25,6 +25,6 @@ expect.extend({
       expect(receivedPaths).toEqual(expectedPaths);
     }
 
-    return { pass: !this.isNot, message: () => 'Success?' };
+    return { pass: !this.isNot, message: () => 'All value paths expected to match.' };
   },
 });
