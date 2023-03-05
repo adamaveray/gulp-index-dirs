@@ -12,7 +12,7 @@ function renameFile(file: Vinyl, indexName: string): void {
   }
 }
 
-export default function indexDirs(indexName: string = 'index'): Transform {
+export default function indexDirs(indexName = 'index'): Transform {
   return new Transform({
     objectMode: true,
     transform(file: Vinyl, enc, cb) {

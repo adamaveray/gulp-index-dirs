@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/ban-types,@typescript-eslint/no-unused-vars -- Augmenting library - must preserve exact signature */
+
 declare global {
   import type Vinyl from 'vinyl';
 
