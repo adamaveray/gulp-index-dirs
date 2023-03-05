@@ -9,12 +9,12 @@ function getFilePaths(files: Vinyl[]): string[] {
 expect.extend({
   toMatchVinylPaths(received: any, expected: any): jest.CustomMatcherResult {
     if (!Array.isArray(received)) {
-      return { pass: true, message: () => 'Value expected to be array.' };
+      return { pass: false, message: () => 'Value expected to be array.' };
     }
 
-    const nonVinylEntry = received.find((item) => item instanceof Vinyl);
+    const nonVinylEntry = received.find((item) => !(item instanceof Vinyl));
     if (nonVinylEntry != null) {
-      return { pass: true, message: () => 'All values expected to be Vinyl files.' };
+      return { pass: false, message: () => 'All values expected to be Vinyl files.' };
     }
 
     const receivedPaths = getFilePaths(received);
