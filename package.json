@@ -47,11 +47,6 @@
       "./test/lib/patch-jest.ts"
     ]
   },
-  "husky": {
-    "hooks": {
-      "pre-push": "npm run lint && npm run test"
-    }
-  },
   "devDependencies": {
     "@averay/codeformat": "^0.1.6",
     "@babel/preset-typescript": "^7.21.0",
