@@ -32,7 +32,9 @@ Import the `indexDirs` function and add it to a Gulp stream.
 ```js
 import indexDirs from '@averay/gulp-index-dirs';
 
-gulp.src('...')
+gulp
+  .src('...')
+  .pipe(/* Apply plugins */)
   .pipe(indexDirs())
   .pipe(gulp.dest('...'));
 ```

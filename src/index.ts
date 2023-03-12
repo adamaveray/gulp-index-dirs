@@ -1,13 +1,14 @@
 import { join } from 'node:path';
 import { Transform } from 'node:stream';
+
 import type Vinyl from 'vinyl';
 
 function renameFile(file: Vinyl, indexName: string): void {
-  const { extname, basename } = file;
-  const extlessBasename = basename.substring(0, basename.length - extname.length);
+  const { basename, dirname, extname } = file;
+  const extlessBasename = basename.slice(0, Math.max(0, basename.length - extname.length));
   if (extlessBasename !== indexName) {
     // Convert to nested index
-    file.dirname = join(file.dirname, extlessBasename);
+    file.dirname = join(dirname, extlessBasename);
     file.basename = indexName + extname;
   }
 }
@@ -15,9 +16,9 @@ function renameFile(file: Vinyl, indexName: string): void {
 export default function indexDirs(indexName = 'index'): Transform {
   return new Transform({
     objectMode: true,
-    transform(file: Vinyl, enc, cb) {
+    transform(file: Vinyl, encoding, callback) {
       renameFile(file, indexName);
-      cb(null, file);
+      callback(null, file);
     },
   });
 }

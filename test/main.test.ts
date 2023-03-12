@@ -1,7 +1,11 @@
+/* eslint sonarjs/no-duplicate-string: "off" -- For easier testing */
+
 import { Readable, Stream } from 'node:stream';
+
 import type Vinyl from 'vinyl';
 
 import indexDirs from '../src';
+
 import { collateStream, makeFile } from './lib';
 
 describe('gulp-index-dirs', () => {
